@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hamburger menu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"> Menu </a>
+      <!-- hamburger menu -->
+      <input type="checkbox" class="side-menu" id="side-menu" />
+      <label for="side-menu" class="hamburger"
+        ><span class="hamburger-line"></span
+      ></label>
+      <nav class="navigation">
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Shop</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- content -->
+    <section>
+      <div class="container">
+        <br />
+        <h1>This is title</h1>
+        <p
+          >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium
+          placeat nulla id eveniet perspiciatis ab ipsum voluptate! Neque porro
+          quo nesciunt, aut aperiam, expedita quibusdam explicabo nam vero esse
+          ex laudantium voluptate ea hic sit, et nemo. Eligendi harum sed
+          asperiores dolore? Quod deleniti fugiat, facilis sapiente quisquam
+          quidem, temporibus nemo voluptates labore fuga explicabo quibusdam
+          accusantium numquam rerum ullam reiciendis similique officiis tenetur
+          impedit et? Nemo laudantium enim fugiat deleniti vitae ea quo vel
+          incidunt sapiente, ad maxime quasi.</p
+        >
+        <div style="height: 300vh"></div>
+      </div>
+    </section>
+  </body>
+  <script>
+    $(function () {
+      $("#side-menu").change(function () {
+        if (!$(this).is(":checked")) {
+          $(".navigation").addClass("slide-up");
+          setTimeout(function () {
+            $(".navigation").removeClass("slide-up");
+          }, 600);
+        }
+      });
+    });
+    // $(".hamburger").click(function () {
+    //   console.log("click");
+    //   $(".navigation").toggleClass("slide-up");
+    // });
+  </script>
+</html>
